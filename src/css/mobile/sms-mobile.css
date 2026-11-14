@@ -2,317 +2,309 @@
    SMS-MOBILE.CSS — Мобильная адаптация страницы SMS-команд (до 767px)
    ========================================================================== */
 
-   @media screen and (max-width: 767px) {
-    @media screen and (max-width: 767px) {
-      html,
-      body {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow-x: hidden;
-      }
-    
-      .sms-page,
-      .main-content {
-        display: block !important;
-        width: 100% !important;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    
-      .bh-sms-wrapper,
-      .u-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        padding-left: 12px;
-        padding-right: 12px;
-        box-sizing: border-box;
-      }
-    }
-    
-    .sms-page {
-      padding: 30px 0 40px;
-      background-attachment: scroll !important;
-      overflow-x: hidden;
-    }
-  
-    .bh-sms-wrapper {
-      max-width: none;
-      margin: 0 auto 30px;
-      padding: 0 12px;
-    }
-  
-    .bh-title {
-      padding: 12px 16px;
-      font-size: 20px;
-      border-radius: 10px; 
-      text-align: center;
-    }
-  
-    /* Таблица SMS-команд превращается в карточки */
-    .bh-table-container {
-      background: transparent;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      margin-bottom: 28px;
-    }
-  
-    .bh-table,
-    .bh-table tbody,
-    .bh-table tr,
-    .bh-table td {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  
-    .bh-table thead {
-      display: none;
-    }
-  
-    .bh-table tr {
-      margin-bottom: 12px;
-      padding: 12px 14px;
-      background: #FFFFFF;
-      border: 1px solid #ECE6DC;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-    }
-  
-    .bh-table tr.bh-row-warning {
-      background-color: #FFFAF5;
-      border-color: #FED7AA;
-    }
-  
-    .bh-table td {
-      padding: 4px 0;
-      border-bottom: none;
-      font-size: 14px;
-      text-align: left;
-    }
-  
-    .bh-table td:first-child {
-      margin-bottom: 6px;
-      padding-bottom: 8px;
-      border-bottom: 1px dashed #ECE6DC;
-    }
-  
-    .bh-code {
-      padding: 4px 8px;
-      font-size: 14px;
-      white-space: normal;
-      word-break: break-word;
-    }
-  
-    /* Информационный блок */
-    .bh-info-box {
-      margin-bottom: 24px;
-      padding: 16px 14px;
-    }
-  
-    .bh-info-box h2 {
-      font-size: 18px;
-    }
-  
-    .bh-info-box h3 {
-      font-size: 15px;
-    }
-  
-    .bh-info-box p,
-    .bh-steps {
-      font-size: 14px;
-    }
-  
-    /* Макет демо-кабинета BeeHAPPY */
-    .bh-ui-mockup {
-      flex-direction: column;
-      margin-top: 18px;
-      border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      font-size: 13px;
-    }
-  
-    .bh-ui-sidebar {
-      width: 100%;
-    }
-  
-    .bh-ui-user,
-    .bh-ui-topbar {
-      display: none;
-    }
-  
-    .bh-ui-menu {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      padding: 8px 10px;
-    }
-  
-    .bh-ui-menu li {
-      padding: 5px 9px;
-      background: #2C3B41;
-      border-left: none;
-      border-radius: 4px;
-      font-size: 12px;
-    }
-  
-    .bh-ui-menu li.is-active {
-      border: 1px solid #F59E0B;
-    }
-  
-    .bh-ui-body {
-      padding: 12px;
-    }
-  
-    .bh-ui-page-title {
-      margin-bottom: 8px;
-    }
-  
-    .bh-ui-card {
-      padding: 12px;
-      border-top-color: #F59E0B;
-      border-radius: 6px;
-    }
-  
-    .bh-ui-card-header {
-      margin-bottom: 10px;
-      padding-bottom: 8px;
-      font-size: 13px;
-    }
-  
-    .bh-ui-table-scroll {
-      overflow: visible;
-      padding: 0;
-    }
-  
-    .bh-ui-table,
-    .bh-ui-table tbody,
-    .bh-ui-table tr,
-    .bh-ui-table td {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-      border: none;
-    }
-  
-    .bh-ui-table thead,
-    .bh-ui-table tbody tr:first-child {
-      display: none;
-    }
-  
-    .bh-ui-table td:nth-child(1),
-    .bh-ui-table td:nth-child(2),
-    .bh-ui-table td:nth-child(4),
-    .bh-ui-table td:nth-child(5) {
-      display: none;
-    }
-  
-    .bh-ui-table td {
-      padding: 6px 0;
-      font-size: 13px;
-    }
-  
-    .bh-ui-table td:nth-child(3)::before {
-      content: "Контролер:";
-      display: block;
-      margin-bottom: 2px;
-      color: #666666;
-      font-size: 11px;
-    }
-  
-    .bh-ui-table td:nth-child(6)::before {
-      content: "Часовий пояс:";
-      display: block;
-      margin-bottom: 4px;
-      color: #2C251D;
-      font-size: 12px;
-      font-weight: 600;
-    }
-  
-    .bh-ui-input,
-    .bh-ui-select {
-      padding: 6px 8px;
-      background: #F9FAFB;
-      border-radius: 4px;
-      font-size: 13px;
-    }
-  
-    .bh-w-imei,
-    .bh-w-name {
-      width: 100% !important;
-    }
-  
-    .bh-ui-dropdown-wrap {
-      width: 100%;
-      min-width: 0;
-      margin-top: 4px;
-    }
-  
-    .bh-ui-select-active {
-      padding: 6px 10px;
-      border-radius: 4px;
-      font-size: 13px;
-    }
-  
-    .bh-ui-dropdown-list li {
-      padding: 5px 10px;
-      font-size: 12.5px;
-    }
-  
-    .bh-ui-btn {
-      margin-top: 4px;
-      margin-right: 4px;
-      padding: 7px 12px;
-      border-radius: 4px;
-      font-size: 12.5px;
-    }
-  
-    /* Визуальная схема SMS — 1 колонка */
-    .bh-sms-scheme {
-      width: 100%;
-      max-width: none;
-      margin: 0 auto 30px;
-      padding: 16px 14px;
-    }
-  
-    .bh-scheme-title {
-      margin-bottom: 12px;
-      font-size: 17px;
-    }
-  
-    .bh-sms-raw {
-      gap: 6px;
-      margin-bottom: 14px;
-      padding: 10px 12px;
-      font-size: 13px;
-    }
-  
-    .bh-scheme-grid {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 10px;
-    }
-  
-    .bh-scheme-item {
-      width: 100%;
-      padding: 10px 12px;
-    }
-  
-    .bh-scheme-icon {
-      font-size: 18px;
-    }
-  
-    .bh-scheme-text strong {
-      margin-bottom: 2px;
-      font-size: 13.5px;
-    }
-  
-    .bh-scheme-text span {
-      font-size: 12px;
-    }
+@media screen and (max-width: 767px) {
+  .sms-page,
+  .main-content {
+    display: block;
+    width: 100%;
+    padding: 30px 0 40px;
+    background-attachment: scroll !important;
+    overflow-x: hidden;
   }
-  
+
+  .bh-sms-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .bh-title {
+    padding: 12px 16px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Таблица SMS-команд превращается в карточки */
+  .bh-table-container {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 28px;
+  }
+
+  .bh-table,
+  .bh-table tbody,
+  .bh-table tr,
+  .bh-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bh-table thead {
+    display: none;
+  }
+
+  .bh-table tr {
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    background: #FFFFFF;
+    border: 1px solid #ECE6DC;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  }
+
+  .bh-table tr.bh-row-warning {
+    background-color: #FFFAF5;
+    border-color: #FED7AA;
+  }
+
+  .bh-table td {
+    padding: 4px 0;
+    border-bottom: none;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .bh-table td:first-child {
+    margin-bottom: 6px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #ECE6DC;
+  }
+
+  .bh-code {
+    padding: 4px 8px;
+    font-size: 14px;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Информационный блок */
+  .bh-info-box {
+    margin-bottom: 24px;
+    padding: 16px 14px;
+  }
+
+  .bh-info-box h2 {
+    font-size: 18px;
+  }
+
+  .bh-info-box h3 {
+    font-size: 15px;
+  }
+
+  .bh-info-box p,
+  .bh-steps {
+    font-size: 14px;
+  }
+
+  /* Макет демо-кабинета BeeHAPPY */
+  .bh-ui-mockup {
+    flex-direction: column;
+    margin-top: 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    font-size: 13px;
+  }
+
+  .bh-ui-sidebar {
+    width: 100%;
+  }
+
+  .bh-ui-user,
+  .bh-ui-topbar {
+    display: none;
+  }
+
+  .bh-ui-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .bh-ui-menu li {
+    padding: 5px 9px;
+    background: #2C3B41;
+    border-left: none;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .bh-ui-menu li.is-active {
+    border: 1px solid #F59E0B;
+  }
+
+  .bh-ui-body {
+    padding: 12px;
+  }
+
+  .bh-ui-page-title {
+    margin-bottom: 8px;
+  }
+
+  .bh-ui-card {
+    padding: 12px;
+    border-top-color: #F59E0B;
+    border-radius: 6px;
+  }
+
+  .bh-ui-card-header {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .bh-ui-table-scroll {
+    overflow: visible;
+    padding: 0;
+  }
+
+  .bh-ui-table,
+  .bh-ui-table tbody,
+  .bh-ui-table tr,
+  .bh-ui-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  .bh-ui-table thead,
+  .bh-ui-table tbody tr:first-child {
+    display: none;
+  }
+
+  .bh-ui-table td:nth-child(1),
+  .bh-ui-table td:nth-child(2),
+  .bh-ui-table td:nth-child(4),
+  .bh-ui-table td:nth-child(5) {
+    display: none;
+  }
+
+  .bh-ui-table td {
+    padding: 6px 0;
+    font-size: 13px;
+  }
+
+  .bh-ui-table td:nth-child(3)::before {
+    content: "Контролер:";
+    display: block;
+    margin-bottom: 2px;
+    color: #666666;
+    font-size: 11px;
+  }
+
+  .bh-ui-table td:nth-child(6)::before {
+    content: "Часовий пояс:";
+    display: block;
+    margin-bottom: 4px;
+    color: #2C251D;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .bh-ui-input,
+  .bh-ui-select {
+    padding: 6px 8px;
+    background: #F9FAFB;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+
+  .bh-w-imei,
+  .bh-w-name {
+    width: 100% !important;
+  }
+
+  .bh-ui-dropdown-wrap {
+    width: 100%;
+    min-width: 0;
+    margin-top: 4px;
+  }
+
+  .bh-ui-select-active {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+
+  .bh-ui-dropdown-list li {
+    padding: 5px 10px;
+    font-size: 12.5px;
+  }
+
+  .bh-ui-save-cell {
+    display: inline-block !important;
+    width: auto !important;
+    margin-right: 6px;
+  }
+
+  .bh-pin-save {
+    top: -6px;
+    right: -8px;
+  }
+
+  .bh-ui-btn {
+    margin-top: 4px;
+    margin-right: 4px;
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-size: 12.5px;
+  }
+
+  /* Визуальная схема SMS — 1 колонка */
+  .bh-sms-scheme {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    padding: 16px 14px;
+    box-sizing: border-box;
+  }
+
+  .bh-scheme-title {
+    margin-bottom: 12px;
+    font-size: 17px;
+  }
+
+  .bh-sms-raw,
+  .bh-scheme-grid,
+  .bh-scheme-item {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bh-sms-raw {
+    gap: 6px;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .bh-scheme-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .bh-scheme-item {
+    padding: 10px 12px;
+  }
+
+  .bh-scheme-icon {
+    font-size: 18px;
+  }
+
+  .bh-scheme-text strong {
+    margin-bottom: 2px;
+    font-size: 13.5px;
+  }
+
+  .bh-scheme-text span {
+    font-size: 12px;
+  }
+}
