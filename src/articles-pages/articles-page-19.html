@@ -7,7 +7,47 @@
     <title>Document</title>
 </head>
 <body>
-            <load ="partials/header.html" />
+               <header class="main-header">
+    <div class="container">
+        <!-- Логотип -->
+        <a href="../index.html" class="logo">
+            <img class="heder-logo" src="../img/beehappy_logo-3.svg" alt="BeeHAPPY Логотип">
+        </a>
+        
+        <!-- Перемикач мов (видимий на всіх екранах) -->
+        <ul class="lang-switcher">
+            <li class="leng-item"><button class="lang-btn active">UA</button></li>
+            <li class="leng-item"><button class="lang-btn">RU</button></li>
+            <li class="leng-item"><button class="lang-btn">EN</button></li>
+        </ul>
+
+        <!-- Кнопка бургер-меню (для 320px і 768px) -->
+        <button class="burger-btn" aria-label="Відкрити меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Єдиний блок меню (випадає на мобільних/планшетах, в рядок на десктопі) -->
+        <div class="header-menu-wrapper">
+            <nav class="main-nav">
+                <ul class="main-list">
+                    <li class="main-item"><a class="main-link" href="../index.html">Головна</a></li>
+                    <li class="main-item"><a class="main-link" href="../price.html">Ціни</a></li>
+                    <li class="main-item"><a class="main-link" href="../sms.html">SMS-команди</a></li>
+                    <li class="main-item"><a class="main-link" href="../articles.html">Статті</a></li>
+                    <li class="main-item"><a class="main-link" href="../demo.html">Демо</a></li>
+                    <li class="main-item"><a class="main-link" href="../contacts.html">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <ul class="auth-buttons">
+                <li class="auth-item"><a class="btn-login" href="../cabinet.html">Увійти</a></li>
+                <li class="auth-item"><a class="btn-register" href="../register.html">Зареєструватися</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 <main class="article-page">
   <div class="article-page__container">
 
