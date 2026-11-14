@@ -3,10 +3,25 @@
    ========================================================================== */
 
    @media (min-width: 768px) and (max-width: 1199px) {
+    .main-header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+  
     .main-header .container,
     .main-header .u-container {
-      max-width: 740px;
+      width: 100%;
+      max-width: 960px;
+      margin-left: auto !important;
+      margin-right: auto !important;
       padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
     }
   
     .main-header .heder-logo {
@@ -38,4 +53,5 @@
       min-width: 160px;
     }
   }
+  
   

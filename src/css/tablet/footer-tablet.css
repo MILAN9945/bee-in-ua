@@ -1,8 +1,33 @@
 /* ==========================================================================
-   FOOTER-TABLET.CSS — Планшетна адаптація футера (768px – 1199px)
+   FOOTER-TABLET.CSS — Притиснутий футер для планшетів (768px – 1199px)
    ========================================================================== */
-   @media (max-width: 1199px) and (min-width: 768px) {
+   @media (min-width: 768px) and (max-width: 1199px) {
+    html,
+    body {
+      height: auto !important;
+      min-height: 100dvh !important; /* Точна висота екрана планшета у вертикальному режимі */
+      display: flex !important;
+      flex-direction: column !important;
+    }
+  
+    main {
+      flex: 1 0 auto !important;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Внутрішня секція сторінки розтягується на всю висоту main до футера */
+    main > section:only-child,
+    .beehappy-contacts-section,
+    .demo-page {
+      flex: 1 0 auto;
+      width: 100%;
+    }
+  
     footer {
+      width: 100%;
+      margin-top: auto !important;
+      flex-shrink: 0 !important;
       padding: 26px 0;
     }
   }
