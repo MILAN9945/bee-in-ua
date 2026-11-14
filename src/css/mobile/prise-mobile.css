@@ -5,11 +5,14 @@
    @media (max-width: 767px) {
     .price-page {
       background-attachment: scroll !important;
-      padding-bottom: 100px;
+      padding-top: 24px;
+      padding-bottom: 20px;
+      overflow: visible !important;
     }
   
     .price-container {
       padding: 16px;
+      overflow: visible !important;
     }
   
     .price-title {
@@ -46,6 +49,7 @@
       align-items: stretch;
       gap: 12px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      overflow: visible !important;
     }
   
     .price-product-card:last-child {
@@ -53,10 +57,40 @@
       border-radius: 12px;
     }
   
+    .price-product-card:hover {
+      position: relative;
+      z-index: 100;
+    }
+  
+    /* Центруємо та дозволяємо картинці збільшуватися без обрізки */
     .price-img-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 150px;
       padding: 8px;
+      overflow: visible !important;
+    }
+  
+    .price-page img {
+      display: block;
+      position: relative;
+      z-index: 10;
+      max-width: 130px;
+      margin: 0 auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      transform-origin: center center;
+    }
+  
+    .price-page img:hover,
+    .price-page img:active {
+      transform: scale(1.9);
+      z-index: 101;
+      border: none;
+      border-radius: 12px;
+      background-color: #FFFDF9;
+      box-shadow: 0 12px 32px rgba(255, 190, 0, 0.22), 0 4px 14px rgba(44, 37, 29, 0.08);
     }
   
     .price-product-info {
@@ -119,6 +153,22 @@
   
     .price-row-subtotal span:first-child {
       display: inline;
+    }
+  
+    /* Липка панель замовлення: завжди внизу при прокрутці, в кінці зупиняється ВИЩЕ футера */
+    .price-summary-bar {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      margin-top: 20px;
+      border: none;
+      border-top: 2px solid var(--bee-primary);
+      border-radius: 12px 12px 0 0;
+      padding: 12px 14px;
+      background-color: #ffffff;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
     }
   
     .price-summary-bar .price-btn {

@@ -15,7 +15,7 @@
   .price-page {
     background-color: #fcf6e8 !important;
     background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)), 
-                      url('./img/fon/foto-fon2.webp') !important;
+                      url('../img/fon/foto-fon2.webp') !important;
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;
@@ -252,4 +252,50 @@
     flex-direction: column;
     gap: 16px;
   }
+  /* ==========================================================================
+   ДЕСКТОПНАЯ ВЕРСИЯ КАРТИНОК ДЛЯ ПРАЙСА (от 1200px)
+   ========================================================================== */
+@media (min-width: 1200px) {
+  /* Снимаем обрезку (overflow: hidden) со всех обёрток и ячеек таблицы */
+  .price-page .price-table-row,
+  .price-page .price-item,
+  .price-page .price-col-img,
+  .price-page .price-img-wrap,
+  .price-page .price-thumb,
+  .price-page td,
+  .price-page tr {
+    overflow: visible !important;
+  }
+
+  /* Поднимаем активную строку прайса поверх соседних строк при наведении */
+  .price-page .price-table-row:hover,
+  .price-page .price-item:hover,
+  .price-page tr:hover {
+    position: relative;
+    z-index: 100;
+  }
+
+  /* Базовые стили фотографии товара */
+  .price-page img,
+  .price-item-img {
+    display: block;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transform-origin: left center; /* Растёт вправо от левого края, не уходя за экран */
+    cursor: zoom-in;
+  }
+
+  /* Увеличение в 3 раза при наведении с мягкой жёлтой тенью без рамки */
+  .price-page img:hover,
+  .price-item-img:hover {
+    transform: scale(3);
+    z-index: 101;
+    border: none;
+    border-radius: 12px;
+    background-color: #FFFDF9;
+    box-shadow: 0 14px 36px rgba(255, 190, 0, 0.24), 0 6px 16px rgba(44, 37, 29, 0.08);
+  }
+}
+
   
