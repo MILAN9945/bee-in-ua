@@ -15,7 +15,7 @@
   .price-page {
     background-color: #fcf6e8 !important;
     background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)), 
-                      url('../img/fon/foto-fon2.webp') !important;
+                      url('../../img/fon/foto-fon1.webp') !important;
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed !important;

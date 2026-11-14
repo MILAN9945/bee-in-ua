@@ -1,95 +1,335 @@
-/* Базове обнулення для секції (якщо не задано глобально) */
-.stats {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #fcfcf9;
-  color: #333;
-}
+/* ==========================================================================
+   ARTICLES-DESCTOP.CSS — Десктопная основа, иконки и анимации кнопок BeeHAPPY
+   ========================================================================== */
 
-/* Заголовок секції */
-.stats-title {
-  font-size: 36px;
-  color: #2c3e50;
-  margin-bottom: 12px;
-  font-weight: 700;
-  position: relative;
-}
-
-/* Помаранчева лінія під заголовком у стилі бджільництва */
-.stats-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #f39c12;
-  margin-top: 8px;
-  border-radius: 2px;
-}
-
-/* Опис під заголовком */
-.wiki-description {
-  font-size: 16px;
-  color: #555;
-  max-width: 800px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-.wiki-description strong {
-  color: #2c3e50;
-  font-weight: 600;
-}
-
-.wiki-description em {
-  font-style: normal;
-  color: #e67e22;
-  font-weight: 500;
-}
-
-/* Сітка для списку статей */
-.stats-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-/* Картка статті */
-.stats-item {
-  background-color: #ffffff;
-  border: 1px solid #eef0f2;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  display: flex;
-}
-
-/* Ефект наведення на картку */
-.stats-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 20px rgba(243, 156, 18, 0.08);
-  border-color: #f39c12;
-}
-
-/* Посилання всередині картки (зона кліку на всю картку) */
-.stats-link {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 24px 20px;
-  text-decoration: none;
-  color: #2c3e50;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.4;
-  transition: color 0.2s ease;
-}
-
-/* Зміна кольору тексту при наведенні */
-.stats-item:hover .stats-link {
-  color: #e67e22;
-}
+   @keyframes articlesFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes btnShimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 150%;
+    }
+  }
+  
+  /* Задний фон только для страницы статей */
+  main:has(.stats-list),
+  main:has(.articles-list),
+  main.articles-bg {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    padding: 50px 20px 80px;
+    background-color: var(--cream, #FFF9ED) !important;
+    background-image:
+      radial-gradient(circle at 88% 12%, rgba(255, 233, 169, 0.55) 0, transparent 32%),
+      linear-gradient(rgba(255, 249, 237, 0.45), rgba(255, 249, 237, 0.62)),
+      url('../../img/fon/foto-fon3.webp') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+  }
+  
+  /* Главная панель-контейнер в стиле BeeHAPPY */
+  main:has(.stats-list) .stats,
+  .articles-section {
+    position: relative;
+    overflow: hidden;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 50px 58px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid var(--border, #EFDFC0);
+    border-radius: 28px;
+    box-shadow: 0 18px 45px rgba(117, 81, 20, 0.11);
+    color: var(--brown, #57432B);
+    animation: articlesFadeUp 0.55s ease-out both;
+  }
+  
+  /* Фирменная медовая полоса сверху */
+  main:has(.stats-list) .stats::before,
+  .articles-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FFCC00, #FFA500);
+  }
+  
+  /* Заголовок с иконкой базы знаний */
+  .stats-title,
+  .articles-section .u-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 18px;
+    color: var(--brown, #57432B);
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+  
+  .stats-title::before,
+  .articles-section .u-title::before {
+    content: '🍯';
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    background: var(--yellow-light, #FFF0BD);
+    border: 1px solid #F5D98D;
+    border-radius: 16px;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  
+  .stats-title::after,
+  .articles-section .u-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 84px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--yellow, #FFC21A), var(--yellow-dark, #E9A900));
+    border-radius: 4px;
+  }
+  
+  /* Описание базы знаний */
+  .wiki-description {
+    max-width: 840px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    color: var(--brown-light, #806C52);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  
+  .wiki-description strong {
+    color: var(--brown, #57432B);
+    font-weight: 800;
+  }
+  
+  .wiki-description em {
+    padding: 2px 8px;
+    background: var(--yellow-light, #FFF0BD);
+    border-radius: 6px;
+    color: #8A5E00;
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  /* Сетка карточек-кнопок (2 колонки на десктопе) */
+  .stats-list,
+  .articles-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Карточка-кнопка статьи */
+  .stats-item,
+  .article-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    background: linear-gradient(145deg, #FFFFFF, #FFFDF8);
+    border: 1px solid var(--border, #EFDFC0);
+    border-radius: 20px;
+    box-shadow: 0 5px 16px rgba(117, 81, 20, 0.05);
+    transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.32s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+    animation: articlesFadeUp 0.6s ease-out both;
+  }
+  
+  /* Световой блик при наведении на карточку */
+  .stats-item::after,
+  .article-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 240, 189, 0.45),
+      transparent
+    );
+    pointer-events: none;
+  }
+  
+  .stats-item:hover::after,
+  .article-card:hover::after {
+    animation: btnShimmer 0.75s ease-out;
+  }
+  
+  /* Ссылка на всю площадь карточки */
+  .stats-item a,
+  .article-card a,
+  .stats-link {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    min-height: 92px;
+    padding: 18px 20px;
+    color: var(--brown, #57432B);
+    font-size: 15.5px;
+    font-weight: 700;
+    line-height: 1.42;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  
+  /* Базовый контейнер левой тематической иконки */
+  .stats-item a::before,
+  .article-card a::before,
+  .stats-link::before {
+    content: '🐝';
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    background: var(--cream, #FFF9ED);
+    border: 1px solid var(--border, #EFDFC0);
+    border-radius: 14px;
+    font-size: 22px;
+    flex-shrink: 0;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+  }
+  
+  /* Индивидуальные тематические иконки для всех 22 статей */
+  .stats-list > li:nth-child(1) a::before,
+  .articles-list > li:nth-child(1) a::before { content: '📘' !important; }
+  .stats-list > li:nth-child(2) a::before,
+  .articles-list > li:nth-child(2) a::before { content: '📗' !important; }
+  .stats-list > li:nth-child(3) a::before,
+  .articles-list > li:nth-child(3) a::before { content: '📡' !important; }
+  .stats-list > li:nth-child(4) a::before,
+  .articles-list > li:nth-child(4) a::before { content: '🐝' !important; }
+  .stats-list > li:nth-child(5) a::before,
+  .articles-list > li:nth-child(5) a::before { content: '🎯' !important; }
+  .stats-list > li:nth-child(6) a::before,
+  .articles-list > li:nth-child(6) a::before { content: '🍯' !important; }
+  .stats-list > li:nth-child(7) a::before,
+  .articles-list > li:nth-child(7) a::before { content: '📒' !important; }
+  .stats-list > li:nth-child(8) a::before,
+  .articles-list > li:nth-child(8) a::before { content: '📶' !important; }
+  .stats-list > li:nth-child(9) a::before,
+  .articles-list > li:nth-child(9) a::before { content: '☀️' !important; }
+  .stats-list > li:nth-child(10) a::before,
+  .articles-list > li:nth-child(10) a::before { content: '🤖' !important; }
+  .stats-list > li:nth-child(11) a::before,
+  .articles-list > li:nth-child(11) a::before { content: '📍' !important; }
+  .stats-list > li:nth-child(12) a::before,
+  .articles-list > li:nth-child(12) a::before { content: '💰' !important; }
+  .stats-list > li:nth-child(13) a::before,
+  .articles-list > li:nth-child(13) a::before { content: '⚖️' !important; }
+  .stats-list > li:nth-child(14) a::before,
+  .articles-list > li:nth-child(14) a::before { content: '⚠️' !important; }
+  .stats-list > li:nth-child(15) a::before,
+  .articles-list > li:nth-child(15) a::before { content: '🛠️' !important; }
+  .stats-list > li:nth-child(16) a::before,
+  .articles-list > li:nth-child(16) a::before { content: '🌐' !important; }
+  .stats-list > li:nth-child(17) a::before,
+  .articles-list > li:nth-child(17) a::before { content: '📈' !important; }
+  .stats-list > li:nth-child(18) a::before,
+  .articles-list > li:nth-child(18) a::before { content: '🔊' !important; }
+  .stats-list > li:nth-child(19) a::before,
+  .articles-list > li:nth-child(19) a::before { content: '🌡️' !important; }
+  .stats-list > li:nth-child(20) a::before,
+  .articles-list > li:nth-child(20) a::before { content: '🧭' !important; }
+  .stats-list > li:nth-child(21) a::before,
+  .articles-list > li:nth-child(21) a::before { content: '📊' !important; }
+  .stats-list > li:nth-child(22) a::before,
+  .articles-list > li:nth-child(22) a::before { content: '⚙️' !important; }
+  
+  /* Кнопка-таблетка справа: «Читати →» */
+  .stats-item a::after,
+  .article-card a::after,
+  .stats-link::after {
+    content: 'Читати →';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 14px;
+    background: var(--yellow-light, #FFF0BD);
+    border: 1px solid #F5D98D;
+    border-radius: 30px;
+    color: #7A5200;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background 0.25s ease,
+                border-color 0.25s ease,
+                color 0.25s ease,
+                box-shadow 0.25s ease;
+  }
+  
+  /* Анимации при наведении */
+  .stats-item:hover,
+  .article-card:hover {
+    transform: translateY(-5px);
+    background: #FFFFFF;
+    border-color: var(--yellow-dark, #E9A900);
+    box-shadow: 0 16px 34px rgba(220, 157, 0, 0.16);
+  }
+  
+  .stats-item:hover a,
+  .article-card:hover a,
+  .stats-item:hover .stats-link {
+    color: #2C2519;
+  }
+  
+  .stats-item:hover a::before,
+  .article-card:hover a::before,
+  .stats-item:hover .stats-link::before {
+    background: var(--yellow-light, #FFF0BD);
+    border-color: var(--yellow-dark, #E9A900);
+    transform: scale(1.1) rotate(-6deg);
+  }
+  
+  .stats-item:hover a::after,
+  .article-card:hover a::after,
+  .stats-item:hover .stats-link::after {
+    background: linear-gradient(135deg, #FFD65B, #FFC21A);
+    border-color: var(--yellow-dark, #E9A900);
+    color: #2C2519;
+    transform: translateX(3px) scale(1.04);
+    box-shadow: 0 6px 15px rgba(233, 169, 0, 0.32);
+  }
+  
+  .stats-item:active,
+  .article-card:active {
+    transform: translateY(-2px);
+  }
+  
