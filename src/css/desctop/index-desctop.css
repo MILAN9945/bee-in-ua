@@ -12,13 +12,19 @@
     background: var(--yellow);
   }
   
-  /* HERO */
-  .hero {
-    padding: 30px 0 90px;
-    background:
-      radial-gradient(circle at 85% 15%, #FFE9A9 0, transparent 25%),
-      linear-gradient(135deg, #FFF9ED, #FFF1CE);
-  }
+  /* HERO с мягким фоновым изображением пасеки */
+.hero {
+  padding: 30px 0 90px;
+  background-color: #FFF9ED;
+  background-image:
+    radial-gradient(circle at 85% 15%, rgba(255, 233, 169, 0.65) 0, transparent 35%),
+    linear-gradient(135deg, rgba(255, 249, 237, 0.86), rgba(255, 241, 206, 0.82)),
+    url('../../img/fon/foto-fon3.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
   
   .hero-notices {
     display: flex;
@@ -451,4 +457,35 @@
   .back-top:hover {
     background: var(--yellow-dark);
   }
-  
+/* Жёстко закрепляем фото foto-fon5.webp только для главной страницы */
+main:has(.hero) {
+  background-color: #FFF9ED !important;
+  background-image:
+    linear-gradient(rgba(255, 249, 237, 0.84), rgba(255, 249, 237, 0.80)),
+    url('../../img/fon/foto-fon3.webp') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  padding-top: 65px !important;
+}
+
+/* Возвращаем картинку для первого экрана без перезаписи */
+.hero {
+  padding-top: 50px;
+  background-color: #FFF9ED;
+  background-image:
+    radial-gradient(circle at 85% 15%, rgba(255, 233, 169, 0.65) 0, transparent 35%),
+    linear-gradient(135deg, rgba(255, 249, 237, 0.86), rgba(255, 241, 206, 0.82)),
+    url('../../img/fon/foto-fon3.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.information,
+.instrument,
+.graphik,
+.faq {
+  background: rgba(255, 249, 237, 0.72);
+} 

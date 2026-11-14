@@ -2,20 +2,26 @@
    SMS-DESCTOP.CSS — Часть 1 из 2
    ========================================================================== */
 
-/* Изолированный фон только для страницы SMS */
-.sms-page {
+/* Изолированный приглушённый фон только для страницы SMS */
+.sms-page,
+main.main-content {
+  display: block;
   width: 100%;
-  padding: 50px 0 60px;
+  padding: 50px 0 70px;
   background-color: #FCF6E8 !important;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3)),
-    url('../img/fon/foto-fon2.webp') !important;
+  background-image: linear-gradient(rgba(255, 249, 237, 0.2), rgba(255, 249, 237, 0.5)),
+                    url('../../img/fon/foto-fon2.webp') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
+  color: var(--bee-text);
 }
 
 .bh-sms-wrapper {
+  width: min(1160px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
   color: #2C251D;
   line-height: 1.5;
 }
@@ -28,13 +34,19 @@
   font-size: clamp(24px, 3vw, 32px);
   box-shadow: var(--shadow);
   margin-top: 20px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
-/* Таблица SMS-команд */
+/* Плотная белая карточка для таблицы SMS-команд */
 .bh-table-container {
+  position: relative;
   padding: 0;
-  border-radius: 14px;
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--border, #EFDFC0);
+  border-top: 6px solid var(--yellow, #FFC21A);
+  border-radius: 20px;
+  box-shadow: 0 14px 38px rgba(117, 81, 20, 0.12);
   overflow: hidden;
   margin-bottom: 36px;
 }
@@ -120,15 +132,16 @@
   vertical-align: middle;
 }
 
-/* Информационный блок */
+/* Плотная белая карточка для информационного блока */
 .bh-info-box {
-  margin-bottom: 32px;
-  padding: 28px 32px;
-  background-color: #FBF7F0;
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--yellow);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
+  position: relative;
+  margin-bottom: 36px;
+  padding: 32px 36px;
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--border, #EFDFC0);
+  border-top: 6px solid var(--yellow, #FFC21A);
+  border-radius: 20px;
+  box-shadow: 0 14px 38px rgba(117, 81, 20, 0.12);
 }
 
 .bh-info-box h2 {
@@ -164,11 +177,7 @@
   margin: 0;
 }
 
-/* ==========================================================================
-   SMS-DESCTOP.CSS — Часть 2 из 2
-   ========================================================================== */
-
-/* Макет демо-кабінету BeeHAPPY */
+/* Макет демо-кабінету BeeHAPPY (начало) */
 .bh-ui-mockup {
   display: flex;
   flex-direction: row;
@@ -287,364 +296,361 @@
   color: #FFFFFF;
   font-weight: 600;
 }
+/* ==========================================================================
+   SMS-DESCTOP.CSS — Часть 2 из 2
+   ========================================================================== */
 
-.bh-ui-body {
-  padding: 16px 20px;
-}
-
-.bh-ui-page-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #333333;
-}
-
-.bh-ui-card {
-  padding: 12px;
-  background: #FFFFFF;
-  border-top: 3px solid #D2D6DE;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.bh-ui-card-header {
-  margin-bottom: 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #EEEEEE;
-  color: #444444;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.bh-ui-table-scroll {
-  overflow: visible;
-  padding-top: 10px;
-  padding-bottom: 4px;
-}
-
-.bh-ui-table {
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.bh-ui-table thead {
-  display: table-header-group;
-}
-
-.bh-ui-table tbody {
-  display: table-row-group;
-}
-
-.bh-ui-table tr {
-  display: table-row;
-}
-
-.bh-ui-table th,
-.bh-ui-table td {
-  display: table-cell;
-  width: auto;
-  padding: 6px 8px;
-  border: 1px solid #E5E7EB;
-  text-align: left;
-  vertical-align: top;
-  font-size: 13px;
-}
-
-.bh-ui-table th {
-  background: #F9FAFB;
-  font-weight: 600;
-  color: #374151;
-  white-space: nowrap;
-}
-
-.bh-ui-nowrap {
-  white-space: nowrap;
-}
-
-.bh-ui-input,
-.bh-ui-select {
-  width: 100% !important;
-  padding: 4px 6px;
-  background: #FFFFFF;
-  border: 1px solid #D2D6DE;
-  border-radius: 3px;
-  color: #333333;
-  font-size: 12.5px;
-}
-
-.bh-w-imei {
-  width: 95px !important;
-}
-
-.bh-w-name {
-  width: 65px !important;
-}
-
-.bh-ui-dropdown-wrap {
-  position: relative;
-  min-width: 135px;
-  margin-top: 0;
-}
-
-.bh-ui-select-active {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 8px;
-  background: #FFFFFF;
-  border: 2px solid #F59E0B;
-  border-radius: 3px;
-  font-size: 12.5px;
-  font-weight: 600;
-}
-
-.bh-ui-dropdown-list {
-  list-style: none;
-  margin: 2px 0 0 0;
-  padding: 0;
-  background: #FFFFFF;
-  border: 1px solid #B5BBC8;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-.bh-ui-dropdown-list li {
-  padding: 4px 8px;
-  font-size: 12.5px;
-}
-
-.bh-ui-dropdown-list li.is-selected {
-  background: #1D70B8;
-  color: #FFFFFF;
-  font-weight: 600;
-}
-
-.bh-ui-btn {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.bh-ui-btn-green {
-  background: #00A65A;
-  color: #FFFFFF;
-}
-
-.bh-ui-btn-light {
-  background: #F4F4F4;
-  color: #444444;
-  border: 1px solid #DDDDDD;
-}
-
-.bh-ui-btn-cyan {
-  background: #5BC0DE;
-  color: #FFFFFF;
-  outline: 2px solid #F59E0B;
-  outline-offset: 2px;
-}
-
-.bh-ui-btn-red {
-  background: #DD4B39;
-  color: #FFFFFF;
-}
-
-.bh-step-pin {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  background: #F59E0B;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: #FFFFFF;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.bh-pin-tz {
-  position: absolute;
-  top: -10px;
-  right: -6px;
-  z-index: 2;
-}
-
-.bh-ui-save-cell {
-  position: relative;
-}
-
-.bh-pin-save {
-  position: absolute;
-  top: -10px;
-  right: -4px;
-  z-index: 2;
-}
-
-/* Визуальная схема SMS (3 колонки на десктопе) */
-.bh-sms-scheme {
-  padding: 26px 30px;
-  border-radius: 14px;
-}
-
-.bh-scheme-title {
-  margin: 0 0 14px 0;
-  font-size: 18px;
-  line-height: 1.3;
-  color: #1F1912;
-}
-
-.bh-sms-raw {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
-  padding: 14px 16px;
-  background: #1F1912;
-  border-radius: 8px;
-  color: #FFFFFF;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.bh-hl {
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 700;
-  word-break: break-word;
-}
-
-.bh-hl-in {
-  background: rgba(239, 68, 68, 0.14);
-  border-left: 3px solid #EF4444;
-}
-
-.bh-sms-raw .bh-hl-in {
-  background: rgba(239, 68, 68, 0.25);
-  color: #FCA5A5;
-  border: none;
-}
-
-.bh-hl-out {
-  background: rgba(245, 158, 11, 0.14);
-  border-left: 3px solid #F59E0B;
-}
-
-.bh-sms-raw .bh-hl-out {
-  background: rgba(245, 158, 11, 0.25);
-  color: #FCD34D;
-  border: none;
-}
-
-.bh-hl-weight {
-  background: rgba(16, 185, 129, 0.14);
-  border-left: 3px solid #10B981;
-}
-
-.bh-sms-raw .bh-hl-weight {
-  background: rgba(16, 185, 129, 0.25);
-  color: #6EE7B7;
-  border: none;
-}
-
-.bh-hl-gsm {
-  background: rgba(59, 130, 246, 0.14);
-  border-left: 3px solid #3B82F6;
-}
-
-.bh-sms-raw .bh-hl-gsm {
-  background: rgba(59, 130, 246, 0.25);
-  color: #93C5FD;
-  border: none;
-}
-
-.bh-hl-bat {
-  background: rgba(139, 92, 246, 0.14);
-  border-left: 3px solid #8B5CF6;
-}
-
-.bh-sms-raw .bh-hl-bat {
-  background: rgba(139, 92, 246, 0.25);
-  color: #C4B5FD;
-  border: none;
-}
-
-.bh-hl-day {
-  background: rgba(20, 184, 166, 0.14);
-  border-left: 3px solid #14B8A6;
-}
-
-.bh-sms-raw .bh-hl-day {
-  background: rgba(20, 184, 166, 0.25);
-  color: #5EEAD4;
-  border: none;
-}
-
-.bh-hl-bal {
-  background: rgba(234, 179, 8, 0.14);
-  border-left: 3px solid #EAB308;
-}
-
-.bh-sms-raw .bh-hl-bal {
-  background: rgba(234, 179, 8, 0.25);
-  color: #FDE047;
-  border: none;
-}
-
-.bh-scheme-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  width: 100%;
-}
-
-.bh-scheme-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 12px 14px;
-  border-radius: 8px;
-}
-
-.bh-scheme-icon {
-  font-size: 20px;
-  line-height: 1.2;
-  flex-shrink: 0;
-}
-
-.bh-scheme-text strong {
-  display: block;
-  font-size: 14px;
-  color: #1F1912;
-  margin-bottom: 3px;
-}
-
-.bh-scheme-text span {
-  display: block;
-  font-size: 12.5px;
-  color: #5C4B37;
-  line-height: 1.4;
-}
-
-.bh-scheme-text code {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 700;
-  color: #1F1912;
-}
-
-.sms-page,
-.main-content {
-  display: block;
-  width: 100%;
-}
-
-.bh-sms-wrapper {
-  width: min(1160px, calc(100% - 40px));
-  margin-left: auto;
-  margin-right: auto;
-}
+   .bh-ui-body {
+    padding: 16px 20px;
+  }
+  
+  .bh-ui-page-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333333;
+  }
+  
+  .bh-ui-card {
+    padding: 12px;
+    background: #FFFFFF;
+    border-top: 3px solid #D2D6DE;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .bh-ui-card-header {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #444444;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .bh-ui-table-scroll {
+    overflow: visible;
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
+  
+  .bh-ui-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  
+  .bh-ui-table thead {
+    display: table-header-group;
+  }
+  
+  .bh-ui-table tbody {
+    display: table-row-group;
+  }
+  
+  .bh-ui-table tr {
+    display: table-row;
+  }
+  
+  .bh-ui-table th,
+  .bh-ui-table td {
+    display: table-cell;
+    width: auto;
+    padding: 6px 8px;
+    border: 1px solid #E5E7EB;
+    text-align: left;
+    vertical-align: top;
+    font-size: 13px;
+  }
+  
+  .bh-ui-table th {
+    background: #F9FAFB;
+    font-weight: 600;
+    color: #374151;
+    white-space: nowrap;
+  }
+  
+  .bh-ui-nowrap {
+    white-space: nowrap;
+  }
+  
+  .bh-ui-input,
+  .bh-ui-select {
+    width: 100% !important;
+    padding: 4px 6px;
+    background: #FFFFFF;
+    border: 1px solid #D2D6DE;
+    border-radius: 3px;
+    color: #333333;
+    font-size: 12.5px;
+  }
+  
+  .bh-w-imei {
+    width: 95px !important;
+  }
+  
+  .bh-w-name {
+    width: 65px !important;
+  }
+  
+  .bh-ui-dropdown-wrap {
+    position: relative;
+    min-width: 135px;
+    margin-top: 0;
+  }
+  
+  .bh-ui-select-active {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px;
+    background: #FFFFFF;
+    border: 2px solid #F59E0B;
+    border-radius: 3px;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+  
+  .bh-ui-dropdown-list {
+    list-style: none;
+    margin: 2px 0 0 0;
+    padding: 0;
+    background: #FFFFFF;
+    border: 1px solid #B5BBC8;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+  
+  .bh-ui-dropdown-list li {
+    padding: 4px 8px;
+    font-size: 12.5px;
+  }
+  
+  .bh-ui-dropdown-list li.is-selected {
+    background: #1D70B8;
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  
+  .bh-ui-btn {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .bh-ui-btn-green {
+    background: #00A65A;
+    color: #FFFFFF;
+  }
+  
+  .bh-ui-btn-light {
+    background: #F4F4F4;
+    color: #444444;
+    border: 1px solid #DDDDDD;
+  }
+  
+  .bh-ui-btn-cyan {
+    background: #5BC0DE;
+    color: #FFFFFF;
+    outline: 2px solid #F59E0B;
+    outline-offset: 2px;
+  }
+  
+  .bh-ui-btn-red {
+    background: #DD4B39;
+    color: #FFFFFF;
+  }
+  
+  .bh-step-pin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: #F59E0B;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .bh-pin-tz {
+    position: absolute;
+    top: -10px;
+    right: -6px;
+    z-index: 2;
+  }
+  
+  .bh-ui-save-cell {
+    position: relative;
+  }
+  
+  .bh-pin-save {
+    position: absolute;
+    top: -10px;
+    right: -4px;
+    z-index: 2;
+  }
+  
+  /* Визуальная схема SMS — плотная белая карточка с жёлтой полосой сверху */
+  .bh-sms-scheme {
+    position: relative;
+    padding: 30px 34px;
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--border, #EFDFC0);
+    border-top: 6px solid var(--yellow, #FFC21A);
+    border-radius: 20px;
+    box-shadow: 0 14px 38px rgba(117, 81, 20, 0.12);
+  }
+  
+  .bh-scheme-title {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #1F1912;
+  }
+  
+  .bh-sms-raw {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding: 14px 16px;
+    background: #1F1912;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .bh-hl {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    word-break: break-word;
+  }
+  
+  .bh-hl-in {
+    background: rgba(239, 68, 68, 0.14);
+    border-left: 3px solid #EF4444;
+  }
+  
+  .bh-sms-raw .bh-hl-in {
+    background: rgba(239, 68, 68, 0.25);
+    color: #FCA5A5;
+    border: none;
+  }
+  
+  .bh-hl-out {
+    background: rgba(245, 158, 11, 0.14);
+    border-left: 3px solid #F59E0B;
+  }
+  
+  .bh-sms-raw .bh-hl-out {
+    background: rgba(245, 158, 11, 0.25);
+    color: #FCD34D;
+    border: none;
+  }
+  
+  .bh-hl-weight {
+    background: rgba(16, 185, 129, 0.14);
+    border-left: 3px solid #10B981;
+  }
+  
+  .bh-sms-raw .bh-hl-weight {
+    background: rgba(16, 185, 129, 0.25);
+    color: #6EE7B7;
+    border: none;
+  }
+  
+  .bh-hl-gsm {
+    background: rgba(59, 130, 246, 0.14);
+    border-left: 3px solid #3B82F6;
+  }
+  
+  .bh-sms-raw .bh-hl-gsm {
+    background: rgba(59, 130, 246, 0.25);
+    color: #93C5FD;
+    border: none;
+  }
+  
+  .bh-hl-bat {
+    background: rgba(139, 92, 246, 0.14);
+    border-left: 3px solid #8B5CF6;
+  }
+  
+  .bh-sms-raw .bh-hl-bat {
+    background: rgba(139, 92, 246, 0.25);
+    color: #C4B5FD;
+    border: none;
+  }
+  
+  .bh-hl-day {
+    background: rgba(20, 184, 166, 0.14);
+    border-left: 3px solid #14B8A6;
+  }
+  
+  .bh-sms-raw .bh-hl-day {
+    background: rgba(20, 184, 166, 0.25);
+    color: #5EEAD4;
+    border: none;
+  }
+  
+  .bh-hl-bal {
+    background: rgba(234, 179, 8, 0.14);
+    border-left: 3px solid #EAB308;
+  }
+  
+  .bh-sms-raw .bh-hl-bal {
+    background: rgba(234, 179, 8, 0.25);
+    color: #FDE047;
+    border: none;
+  }
+  
+  .bh-scheme-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .bh-scheme-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 8px;
+  }
+  
+  .bh-scheme-icon {
+    font-size: 20px;
+    line-height: 1.2;
+    flex-shrink: 0;
+  }
+  
+  .bh-scheme-text strong {
+    display: block;
+    font-size: 14px;
+    color: #1F1912;
+    margin-bottom: 3px;
+  }
+  
+  .bh-scheme-text span {
+    display: block;
+    font-size: 12.5px;
+    color: #5C4B37;
+    line-height: 1.4;
+  }
+  
+  .bh-scheme-text code {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    color: #1F1912;
+  }
+  
