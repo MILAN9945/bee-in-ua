@@ -18,7 +18,7 @@
   background-color: #FFF9ED;
   background-image:
     radial-gradient(circle at 85% 15%, rgba(255, 233, 169, 0.65) 0, transparent 35%),
-    linear-gradient(135deg, rgba(255, 249, 237, 0.86), rgba(255, 241, 206, 0.82)),
+    linear-gradient(135deg, rgba(255, 249, 237, 0.6), rgba(255, 241, 206, 0.4)),
     url('../../img/fon/foto-fon3.webp');
   background-size: cover;
   background-position: center center;
@@ -461,7 +461,7 @@
 main:has(.hero) {
   background-color: #FFF9ED !important;
   background-image:
-    linear-gradient(rgba(255, 249, 237, 0.84), rgba(255, 249, 237, 0.80)),
+    linear-gradient(rgba(255, 249, 237, 0.5), rgba(255, 249, 237, 0.2)),
     url('../../img/fon/foto-fon3.webp') !important;
   background-size: cover !important;
   background-position: center center !important;
@@ -476,10 +476,11 @@ main:has(.hero) {
   background-color: #FFF9ED;
   background-image:
     radial-gradient(circle at 85% 15%, rgba(255, 233, 169, 0.65) 0, transparent 35%),
-    linear-gradient(135deg, rgba(255, 249, 237, 0.86), rgba(255, 241, 206, 0.82)),
-    url('../../img/fon/foto-fon3.webp');
-  background-size: cover;
+    linear-gradient(135deg, rgba(255, 249, 237, 0.5), rgba(255, 241, 206, 0.2)),
+    url('../../img/fon/foto-fon3.webp') !important;
+  background-size: cover !important;
   background-position: center center;
+  background-attachment: fixed !important;
   background-repeat: no-repeat;
 }
 

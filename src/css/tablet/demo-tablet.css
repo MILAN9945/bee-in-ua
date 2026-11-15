@@ -2,19 +2,63 @@
    DEMO-TABLET.CSS — Планшетная адаптация демо-кабинета (768px – 1199px)
    ========================================================================== */
 
-   @media (max-width: 1199px) {
+   @media (min-width: 768px) and (max-width: 1199px) {
     .demo-page {
-      padding: 35px 16px;
-      background-attachment: scroll !important;
+      position: relative;
+      z-index: 1;
+      padding: 36px 24px 50px;
+      background: transparent !important;
+      overflow-x: hidden;
+    }
+  
+    /* Фиксированный задний фон для планшетов без растяжения при прокрутке */
+    .demo-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-color: #FCF6E8;
+      background-image: linear-gradient(rgba(255, 249, 237, 0.4), rgba(255, 249, 237, 0.4)),
+                        url('../../img/fon/foto-fon5.webp');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
     }
   
     .demo-section {
-      max-width: 440px;
-      padding: 28px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 28px;
+      border-radius: 18px;
     }
   
     .demo-link.hive-assembly {
-      max-width: 340px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+  
+    .hive-tier {
+      padding: 16px 14px;
+    }
+  
+    .pill-values {
+      font-size: 17px;
+      gap: 10px;
+    }
+  
+    .sys-box {
+      padding: 7px 10px;
+      font-size: 12.5px;
+    }
+  
+    .weight-num {
+      font-size: 24px;
+    }
+  
+    .cta-strip {
+      padding: 14px 20px;
+      font-size: 15.5px;
     }
   }
   

@@ -9,12 +9,19 @@
     }
   
     .price-container {
-      padding: 20px;
+      width: calc(100% - 24px);
+      padding: 28px 14px 32px;
+      border-radius: 18px;
       overflow: visible !important;
     }
-  
+    
+    .price-container::before {
+      border-radius: 18px 18px 0 0;
+    }
+    
     .price-title {
-      font-size: 1.65rem;
+      font-size: 1.35rem;
+      padding-bottom: 14px;
     }
   
     .price-table-header,

@@ -33,7 +33,7 @@
     background-color: var(--cream, #FFF9ED) !important;
     background-image:
       radial-gradient(circle at 88% 12%, rgba(255, 233, 169, 0.55) 0, transparent 32%),
-      linear-gradient(rgba(255, 249, 237, 0.45), rgba(255, 249, 237, 0.62)),
+      linear-gradient(rgba(255, 249, 237, 0.45), rgba(255, 249, 237, 0.2)),
       url('../../img/fon/foto-fon3.webp') !important;
     background-size: cover !important;
     background-position: center center !important;

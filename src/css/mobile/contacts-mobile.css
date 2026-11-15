@@ -4,9 +4,26 @@
 
    @media (max-width: 767px) {
     .beehappy-contacts-section {
+      position: relative;
+      z-index: 1;
       padding: 30px 15px;
-      background-attachment: scroll !important;
+      background: transparent !important;
       overflow-x: hidden;
+    }
+  
+    /* Фиксированный задний фон для смартфонов (не прокручивается и не растягивается) */
+    .beehappy-contacts-section::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-color: #FCF6E8;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
+                        url('../../img/fon/foto-fon4.webp');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
     }
   
     .contacts-card,
