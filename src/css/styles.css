@@ -124,13 +124,13 @@
 
 .main {
     min-height: 100vh;
-    background: 
+    /* background: 
         linear-gradient(rgba(255, 249, 237, 0.88), rgba(255, 249, 237, 0.88)), 
         url('../img/fon/foto-fon2.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Захищає фон від прокручування */
+    background-attachment: fixed; Захищає фон від прокручування */
 }
 
 

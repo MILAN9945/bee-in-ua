@@ -4,10 +4,27 @@
 
    @media (max-width: 767px) {
     .demo-page {
+      position: relative;
+      z-index: 1;
       min-height: auto;
       padding: 24px 14px;
-      background-attachment: scroll !important;
+      background: transparent !important;
       overflow-x: hidden;
+    }
+  
+    /* Фиксированный задний фон, который остаётся неподвижным при прокрутке на смартфоне */
+    .demo-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-color: #FCF6E8;
+      background-image: linear-gradient(rgba(255, 249, 237, 0.4), rgba(255, 249, 237, 0.4)),
+                        url('../../img/fon/foto-fon5.webp');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
     }
   
     .demo-section {
